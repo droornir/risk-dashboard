@@ -1,0 +1,18 @@
+<div class="card-title">{{ title }} SOURCES (%)</div>
+<div class="card-container">
+
+  <div class="sources-inner-card" *ngFor="let item of webSources; let i=index;">
+    <div class="sources-title">
+      {{ item._id.sourceType | parseAndCapitalize | uppercase }}
+    </div>
+    <div class="progress-sources-wrapper">
+      <div class="progress-sources">
+        <progress max="100" value="{{item.sum}}"></progress>
+      </div>
+      <div class="sum-sources">
+        {{item.sum}}
+      </div>
+    </div>
+  </div>
+
+</div>

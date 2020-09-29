@@ -1,0 +1,30 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #274c6e;
+    color: #c9ced2;
+    font-size: 2vh;
+}
+
+// global classes
+.count-size {
+    font-size: 15px;
+}
+
+.dashboard-card {
+    .card-title {
+        background-color: #253a4c;
+        font-size: 1.1rem;
+        padding: 1vh 1.5vw;
+    }
+
+    .card-container {
+        background-color: #254462;
+        min-height: 230px;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,28 @@
+<div class="dashboard-container">
+
+  <div class="dashboard-row">
+    <div class="dashboard-card main-progress" *ngIf="progressData">
+      <app-progress-bar [progress]="progressData"></app-progress-bar>
+    </div>
+  </div>
+
+  <div *ngIf="riskData && riskData.webRisks">
+    <div class="dashboard-row" *ngFor="let webRisk of riskData.webRisks | orderBy:'web-risk-order'">
+      <div class="dashboard-card" *ngFor="let risk of webRisk.risks | orderBy:'risk-order'">
+        <div [ngSwitch]="risk.type">
+          <ng-template [ngSwitchCase]="'risk-types'">
+            <app-types [webTypes]="risk.payload" [title]="webRisk.title"></app-types>
+          </ng-template>
+          <ng-template [ngSwitchCase]="'risk-severity'">
+            <app-severities [webSeverities]="risk.payload" [title]="webRisk.title"></app-severities>
+          </ng-template>
+          <ng-template [ngSwitchCase]="'risk-source'">
+            <app-sources [webSources]="risk.payload" [title]="webRisk.title"></app-sources>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!riskData && !progressData">
+    <app-loading-spinner></app-loading-spinner>
+  </div>

@@ -1,0 +1,32 @@
+.meter-container {
+  .meter-title {
+    height: 3vh;
+  }
+
+  .meter-progress-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #254462;
+    height: 5vh;
+    padding: 0vh 1vh;
+    margin-right: 61.5vw;
+    
+    .sum-meter {
+      margin-left: 1vw;
+    }
+    .meter-progress-inner {
+      width: 100%;
+      height: 1.2vh;
+
+      .meter-progress {
+        border-radius: 15px;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-image: linear-gradient(#203545, #203545), linear-gradient(to left, #4dafd0, #bbb158);
+      }
+    }
+
+  }
+}

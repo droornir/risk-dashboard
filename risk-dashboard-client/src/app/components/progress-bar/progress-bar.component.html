@@ -1,0 +1,14 @@
+<div class="meter-container">
+    <div class="meter-title">
+      {{title}}
+    </div>
+    <div class="meter-progress-wrapper">
+      <div class="meter-progress-inner">
+        <div class="meter-progress" [ngStyle]="{ 'background-size': 100 - progress + '% 100%, 100%, 100% 100%' }">
+        </div>
+      </div>
+      <div class="sum-meter">
+          {{ progress }}%
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="card-title">{{ title }} TYPES</div>
+<div class="card-container card-types">
+  <div class="card-type" *ngFor="let item of webTypes | orderBy:'order';">
+    <div class="card-type-left">
+      <span class="count-size"> {{item[0].sum}}</span>
+      <br>
+      {{item[0].type | parseAndCapitalize | uppercase}}
+      <br>
+    </div>
+    <div class="card-type-right">
+      <span class="count-size"> {{item[1].sum}}</span>
+      <br>
+      {{item[1].type | parseAndCapitalize | uppercase}}
+      <br>
+    </div>
+  </div>
+</div>

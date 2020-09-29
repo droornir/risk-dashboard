@@ -1,0 +1,25 @@
+.card-types {
+  .card-type {
+      display: flex;
+      flex-direction: row;
+      width: 85%;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 4.5vh;
+      border-top: 1px solid #243c51;
+
+      .card-type-left {
+          padding-left: 1vw;
+
+          .samll-font {
+              font-size: 0.5rem;
+              position: absolute;
+          }
+      }
+
+      .card-type-right {
+          width: 50%;
+
+      }
+  }
+}

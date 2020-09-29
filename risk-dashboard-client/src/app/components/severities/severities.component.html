@@ -1,0 +1,16 @@
+<div class="card-title">{{ title }}</div>
+<div class="card-container card-severity">
+  <div class="doughnut-chart">
+    <canvas baseChart [chartType]="'doughnut'"  [colors]="chartColors" height="140" width="140" [data]="chartData"
+      [labels]="chartLabels"  [legend]="false"
+      [options]="chartOptions">
+    </canvas>
+  </div>
+  <div class="footer">
+    <div *ngFor="let item of webSeverities">
+      {{ item._id.severity | uppercase }}
+      <br>
+      <span>{{item.sum}}</span>
+    </div>
+  </div>
+</div>
