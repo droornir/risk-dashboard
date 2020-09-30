@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm install` to download and install dependencies
 
 ## DEV
-Run `ng serve` for a dev server. The app will automatically reload at `http://localhost:4200/`.
+Run `npm run start` for a dev server. The app will reload at `http://localhost:4200/`.
 
 ## Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
